@@ -6,6 +6,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Button, SwipeButton } from "../../components";
 import styles from "./styles";
 import { loginUser } from "../../store/actions/auth";
+import PropTypes from 'prop-types';
+
 
 const Home = ({ navigation, route }) => {
   const dispatch = useDispatch();
@@ -41,6 +43,11 @@ const Home = ({ navigation, route }) => {
       <SwipeButton onSwipeSuccess={_ => Alert.alert('Success', 'Swipe Success')} />
     </View>
   );
+};
+
+Home.propTypes = {
+  navigation: PropTypes.object,
+  route:PropTypes.object
 };
 
 export default Home;

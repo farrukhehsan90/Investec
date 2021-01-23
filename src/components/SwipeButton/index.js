@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
-const SwipeButton = ({onSwipeSuccess}) => {
+
+const SwipeButton = ({ onSwipeSuccess }) => {
   const [slidingAnimationX, setSlidingAnimationX] = useState(0);
 
   const handleMovement = (e) => {
@@ -34,6 +36,10 @@ const SwipeButton = ({onSwipeSuccess}) => {
       <Text style={styles.buttonText}>Slide me to continue</Text>
     </View>
   );
+};
+
+SwipeButton.propTypes = {
+  onSwipeSuccess: PropTypes.func,
 };
 
 export default SwipeButton;

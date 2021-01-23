@@ -10,6 +10,8 @@ import {useDispatch} from 'react-redux';
 import {StackActions} from '@react-navigation/native';
 import styles from './styles';
 import {loginUser} from '../../store/actions/auth';
+import PropTypes from 'prop-types';
+
 
 const Welcome = ({navigation}) => {
   const dispatch = useDispatch();
@@ -39,6 +41,10 @@ const Welcome = ({navigation}) => {
       </TouchableOpacity>
     </KeyboardAvoidingView>
   );
+};
+
+Welcome.propTypes = {
+  navigation: PropTypes.object
 };
 
 export default Welcome;
