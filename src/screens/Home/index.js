@@ -20,13 +20,10 @@ const Home = ({ navigation, route }) => {
     if (route?.params?.showMessage) {
       const { Device } = NativeModules;
       Device.isEmulator((err, isEmulator) => {
-        Alert.alert('Notice', `You are currently ${isEmulator ? '' : 'not'} using simulator / emulator.`);
+        Alert.alert('Notice', `You are currently ${isEmulator ? '' : 'not'} using a simulator / emulator.`);
       });
     }
-    // For getting Device name
-    //   Device.getDeviceName((err ,name) => {
-    //     console.log(err, name);
-    //  });
+
   }, [])
 
   return (

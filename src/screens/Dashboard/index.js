@@ -9,11 +9,11 @@ const Dashboard = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        Welcome to Dashboard{" "}
+        Welcome to the Dashboard{" "}
         <Text style={styles.name}>
           {user?.name}
         </Text>.
-        You can manage your data from here
+        You can manage your data here
         </Text>
     </View>
   );

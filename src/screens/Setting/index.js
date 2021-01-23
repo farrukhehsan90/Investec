@@ -9,11 +9,11 @@ const Setting = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        Welcome to Setting{" "}
+        Welcome to Settings{" "}
         <Text style={styles.name}>
           {user?.name}
         </Text>.
-        You can manage your account settings from here
+        You can manage your account settings here
         </Text>
     </View>
   );

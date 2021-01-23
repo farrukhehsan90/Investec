@@ -1,7 +1,4 @@
 import Button from './Button';
 import SwipeButton from './SwipeButton';
 
-export {
-    Button,
-    SwipeButton
-}
+export {Button, SwipeButton};

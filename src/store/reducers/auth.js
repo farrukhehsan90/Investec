@@ -1,11 +1,8 @@
-import {
-  LOGIN_SUCCESS,
-  LOGIN_FAILURE
-} from '../actions/types';
+import {LOGIN_SUCCESS, LOGIN_FAILURE} from '../actions/types';
 
 const initialState = {
   user: null,
-  error: null
+  error: null,
 };
 
 const auth = (state = initialState, action) => {
@@ -14,14 +11,14 @@ const auth = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload,
-        error: null
+        error: null,
       };
     }
     case LOGIN_FAILURE: {
       return {
         ...state,
         user: null,
-        error: action.payload
+        error: action.payload,
       };
     }
     default:
